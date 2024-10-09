@@ -1,5 +1,5 @@
 const axios = require("axios");
-const API_URL = "http://localhost:3000/movies";
+const API_URL = "https://cinema-1u48.onrender.com/movies";
 
 const getData = async () => {
   try {

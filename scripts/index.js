@@ -1,6 +1,5 @@
 import "./moviesAndSeries.js";
 const getData = require("./api.js");
-const axios = require("axios");
 const { renderNav, renderContent } = require("./dom.js");
 const darkMode = require("./darkMode.js");
 const { newMovie, clear } = require("./newMovie.js");
