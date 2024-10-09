@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(15, 15, 15);
+}
+body.dark-mode{
+    background-color: #3b3b3b;
+    color: white;
+}
+main{
+    margin: 30px;
+    background-color: #e7e7f8;
+}
+.dark-mode .navbar-link {
+    color: white !important; 
+  }
+.dark-mode{
+    background-color: #797777;
+}
+.card-title{
+    color: black;
+}
+.movement{ 
+    transition: transform 0.5s ease;
+}
+.movement:hover{ 
+    transform: scale(1.06);
+}
+.btn-formulario{
+    --bs-btn-padding-y: 0.25rem;
+    --bs-btn-padding-x: 0.5rem;
+    --bs-btn-font-size: 0.75rem;
+}
