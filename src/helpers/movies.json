@@ -1,0 +1,62 @@
+[
+  {
+    "nombre": "Inception",
+    "imagen": "https://m.media-amazon.com/images/I/81p+xe8cbnL._SY300_.jpg",
+    "genero": "Ciencia Ficción",
+    "rate": 8.8
+  },
+  {
+    "nombre": "The Dark Knight",
+    "imagen": "https://musicart.xboxlive.com/7/abb02f00-0000-0000-0000-000000000002/504/image.jpg",
+    "genero": "Acción",
+    "rate": 9.0
+  },
+  {
+    "nombre": "Interstellar",
+    "imagen": "https://pics.filmaffinity.com/Interstellar-366875261-large.jpg",
+    "genero": "Ciencia Ficción",
+    "rate": 8.6
+  },
+  {
+    "nombre": "Parasite",
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzfjn8HSe873X6M9h4f50GMD3QRRZ_C3nRqg&s",
+    "genero": "Drama",
+    "rate": 8.5
+  },
+  {
+    "nombre": "The Matrix",
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0JpAa61BgkNomeBtnOV74IKWanzABJ7Byug&s",
+    "genero": "Ciencia Ficción",
+    "rate": 8.7
+  },
+  {
+    "nombre": "Gladiator",
+    "imagen": "https://m.media-amazon.com/images/I/912Ht9rUWWS.jpg",
+    "genero": "Acción",
+    "rate": 8.5
+  },
+  {
+    "nombre": "Titanic",
+    "imagen": "https://pics.filmaffinity.com/Titanic-321994924-mmed.jpg",
+    "genero": "Romance",
+    "rate": 7.9
+  },
+  {
+    "nombre": "Pulp Fiction",
+    "imagen": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Pulp_Fiction_%281994%29_poster.jpg/220px-Pulp_Fiction_%281994%29_poster.jpg",
+    "genero": "Crimen",
+    "rate": 8.9
+  },
+  {
+    "nombre": "The Shawshank Redemption",
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoYJKKZ-tw-mSpk9UObRwn6_C3QtkxFj7-8w&s",
+    "genero": "Drama",
+    "rate": 9.3
+  },
+  {
+    "nombre": "Forrest Gump",
+    "imagen": "https://pics.filmaffinity.com/Forrest_Gump-212765827-large.jpg",
+    "genero": "Drama",
+    "rate": 8.8
+  }
+]
