@@ -12,7 +12,7 @@ export const TopMovies = () => {
     .sort((a: Movie, b: Movie) => b.rate - a.rate)
     .slice(0, 6);
   return (
-    <div className="px-20 pt-20">
+    <div className="px-20 pt-10">
       <h2 className="text-2xl font-bold">Explore Top Movies</h2>
       <ul className="flex overflow-x-auto space-x-6 pt-8">
         {topMovies.map((movie) => (

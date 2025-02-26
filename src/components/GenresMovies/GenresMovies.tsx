@@ -3,7 +3,7 @@ import movies from "../../helpers/movies.json";
 
 export const GenresMovies = () => {
   return (
-    <main className="px-20 pt-10 pb-20">
+    <main className="px-20 pt-20 pb-20">
       <h1 className="text-2xl font-bold text-center">Movie Genres</h1>
       <div className="flex gap-8 pt-10">
         {movies.map((movie) => (

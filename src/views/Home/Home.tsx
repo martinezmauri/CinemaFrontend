@@ -22,8 +22,8 @@ export const Home = () => {
             </div>
             <div className="px-40">
               <img
-                className="mx-auto h-60 w-auto"
-                src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                className="mx-auto h-80 w-80"
+                src="src/assets/FilmFlix.png"
                 alt=""
               />
             </div>
