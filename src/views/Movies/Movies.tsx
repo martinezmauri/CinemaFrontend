@@ -4,24 +4,28 @@ import { Footer } from "../../components/Footer/Footer";
 import movies from "../../helpers/movies.json";
 
 export const Movies = () => {
+  const handleErrorImage = () => {};
   return (
     <main>
       <div className="custom-bg px-10 pb-10">
         <NavbarHome />
-        <div className="bg-content-page text-white pt-20 rounded-xl pb-20">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6">
+        <div className="bg-content-page text-white  rounded-xl pb-20">
+          <h1 className="text-center text-6xl font-bold p-10">Películas</h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-6 px-6">
             {movies.map((movie, index) => (
-              <div
-                key={index}
-                className="border rounded-lg p-4 bg-gray-800 flex flex-col items-center "
-              >
-                <h1 className="text-xl font-semibold">{movie.nombre}</h1>
+              <div key={index} className="border rounded-lg flex flex-col w-50">
                 <img
                   src={movie.imagen}
                   alt=""
-                  className="w-60 h-80 rounded-lg  mb-4"
+                  className="rounded-lg object-cover w-full h-full"
+                  onError={handleErrorImage}
                 />
-                <p className="text-gray-300">Genero: {movie.genero}</p>
+                <div className="">
+                  <h2 className="text-lg font-bold text-center">
+                    {movie.nombre}
+                  </h2>
+                  <p className="text-sm text-center">{movie.genero}</p>
+                </div>
               </div>
             ))}
           </div>
