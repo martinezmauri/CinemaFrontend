@@ -3,8 +3,11 @@ import { NavbarHome } from "../../components/Navbar/NavbarHome";
 import { TopMovies } from "../../components/TopMovies/TopMovies";
 import { GenresMovies } from "../../components/GenresMovies/GenresMovies";
 import { Footer } from "../../components/Footer/Footer";
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <main className="">
       <div className="custom-bg px-10 pb-10">
@@ -16,7 +19,10 @@ export const Home = () => {
                 Discover the latest films & watch trailers anywhere!
               </h1>
               <p className="py-5">Start your movie journey now.</p>
-              <button className="border px-5 py-1 border-transparent custom-bg-button rounded-lg w-50">
+              <button
+                className="border px-5 py-1 border-transparent custom-bg-button rounded-lg w-50 cursor-pointer"
+                onClick={() => navigate("/films")}
+              >
                 Start watching
               </button>
             </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import movies from "../../helpers/movies.json";
+import { useAuth } from "../../context/AuthContext";
 
 export const GenresMovies = () => {
   return (

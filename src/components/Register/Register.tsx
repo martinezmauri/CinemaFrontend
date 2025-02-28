@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 interface IRegisterUser {
   name: string;
@@ -9,6 +10,7 @@ interface IRegisterUser {
 }
 
 export const Register = () => {
+  const navigate = useNavigate();
   const [dataRegister, setDataRegister] = useState<IRegisterUser>({
     name: "",
     email: "",
@@ -31,6 +33,9 @@ export const Register = () => {
         "http://localhost:3000/api/auth/register",
         dataRegister
       );
+      if (response.status === 201) {
+        navigate("/login");
+      }
       console.log(response);
     } catch (error) {
       console.error(error);
@@ -149,12 +154,12 @@ export const Register = () => {
 
         <p className="mt-8 text-center text-sm/6 text-gray-500">
           Is a member?
-          <a
-            href="#"
+          <Link
+            to={"/login"}
             className="font-semibold text-indigo-600 hover:text-indigo-500 px-2.5"
           >
             Sign in to your account
-          </a>
+          </Link>
         </p>
       </div>
     </div>

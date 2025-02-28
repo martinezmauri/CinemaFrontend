@@ -2,6 +2,7 @@ import React from "react";
 import { NavbarHome } from "../../components/Navbar/NavbarHome";
 import { Footer } from "../../components/Footer/Footer";
 import movies from "../../helpers/movies.json";
+import { BurgerIcon } from "../../components/Burger-icon/BurgerIcon";
 
 export const Movies = () => {
   const handleErrorImage = () => {};
@@ -10,7 +11,11 @@ export const Movies = () => {
       <div className="custom-bg px-10 pb-10">
         <NavbarHome />
         <div className="bg-content-page text-white  rounded-xl pb-20">
-          <h1 className="text-center text-6xl font-bold p-10">Películas</h1>
+          <div className="p-10">
+            <BurgerIcon />
+            <h1 className="text-center text-6xl font-bold p-10">Películas</h1>
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-6 px-6">
             {movies.map((movie, index) => (
               <div key={index} className="border rounded-lg flex flex-col w-50">

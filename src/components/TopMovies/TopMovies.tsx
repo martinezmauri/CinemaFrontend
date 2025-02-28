@@ -16,7 +16,7 @@ export const TopMovies = () => {
       <h2 className="text-2xl font-bold">Explore Top Movies</h2>
       <ul className="flex overflow-x-auto space-x-6 pt-8">
         {topMovies.map((movie) => (
-          <li key={movie.nombre} className="">
+          <li key={movie.nombre} className="cursor-pointer">
             <img
               src={movie.imagen}
               alt={movie.nombre}

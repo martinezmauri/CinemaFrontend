@@ -1,5 +1,7 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import AuthContext, { useAuth } from "../../context/AuthContext";
+import { Link, useNavigate } from "react-router-dom";
 
 interface ILoginUser {
   email: string;
@@ -7,6 +9,9 @@ interface ILoginUser {
 }
 
 export const Login = () => {
+  const { login } = useAuth();
+  const navigate = useNavigate();
+
   const [dataLogin, setDataLogin] = useState<ILoginUser>({
     email: "",
     password: "",
@@ -27,7 +32,11 @@ export const Login = () => {
         "http://localhost:3000/api/auth/login",
         dataLogin
       );
-      console.log(response);
+      if (response.status === 200) {
+        const { token, user } = response.data;
+        login(token, user);
+        navigate("/");
+      }
     } catch (error) {
       console.error(error);
     }
@@ -112,12 +121,12 @@ export const Login = () => {
 
         <p className="mt-10 text-center text-sm/6 text-gray-500 border-b pb-5">
           Not a member?
-          <a
-            href="#"
+          <Link
+            to={"/register"}
             className="font-semibold text-indigo-600 hover:text-indigo-500 px-2.5"
           >
             Register your account
-          </a>
+          </Link>
         </p>
 
         <div className="flex gap-2 pt-10">
