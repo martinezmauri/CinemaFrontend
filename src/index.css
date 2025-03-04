@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+body {
+  font-family: "Raleway", sans-serif;
+}
 .custom-bg {
   background-color: #161616;
 }

@@ -1,15 +1,36 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+interface IGernes {
+  _id: string;
+  name: string;
+}
 
 export const BurgerIcon = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [genres, setGenres] = useState<IGernes[]>([]);
   const handleView = () => {
     setIsOpen(!isOpen);
   };
+  useEffect(() => {
+    const loadGenres = async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/api/genre");
+        if (response.status === 200) {
+          setGenres(response.data);
+        }
+      } catch (error) {}
+    };
+    loadGenres();
+  }, []);
+
+  useEffect(() => {
+    console.log("Géneros en estado:", genres); // Verifica el valor en el estado
+  }, [genres]);
+
   return (
     <main>
-      {/* Contenedor del icono con tamaño ajustado */}
       <div className="relative">
-        {/* Icono de hamburguesa (agregamos un contenedor pequeño para que ocupe solo el icono) */}
         <div
           className="burger-icon cursor-pointer w-8 h-8 flex flex-col justify-between items-center"
           onClick={handleView}
@@ -22,15 +43,16 @@ export const BurgerIcon = () => {
 
       {/* Menú lateral que se muestra/oculta */}
       <div
-        className={`custom-bg w-70 h-100 absolute top-37 left-12 transition-transform duration-300 ${
+        className={`custom-bg w-70 absolute top-37 left-12 transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "-translate-x-80"
         }`}
       >
-        {/* Contenido del menú */}
         <ul className="p-5 text-white">
-          <li className="mb-3 cursor-pointer">Accion</li>
-          <li className="mb-3 cursor-pointer">Romance</li>
-          <li className="mb-3 cursor-pointer">Comedia</li>
+          {genres.map((genre) => (
+            <li key={genre._id} className="mb-3 w-30 cursor-pointer">
+              {genre.name}
+            </li>
+          ))}
         </ul>
       </div>
     </main>

@@ -15,12 +15,12 @@ export const Home = () => {
         <div className="bg-content-page text-white pt-30 rounded-xl">
           <div className="flex justify-between">
             <div className="w-180 px-20">
-              <h1 className="text-5xl font-bold">
+              <h1 className="text-5xl font-extrabold">
                 Discover the latest films & watch trailers anywhere!
               </h1>
-              <p className="py-5">Start your movie journey now.</p>
+              <p className="py-5 font-light">Start your movie journey now.</p>
               <button
-                className="border px-5 py-1 border-transparent custom-bg-button rounded-lg w-50 cursor-pointer"
+                className="border px-5 py-1 border-transparent font-medium custom-bg-button rounded-lg w-50 cursor-pointer"
                 onClick={() => navigate("/films")}
               >
                 Start watching

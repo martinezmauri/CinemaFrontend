@@ -42,7 +42,7 @@ export const NavbarHome = () => {
               Log in
             </button>
             <button
-              className="border px-5 py-1 border-transparent custom-bg-button rounded-lg w-24 cursor-pointer"
+              className="border px-4 py-1 border-transparent custom-bg-button rounded-lg w-24 cursor-pointer"
               onClick={() => navigate("/register")}
             >
               Sign up
